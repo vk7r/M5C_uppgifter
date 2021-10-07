@@ -8,7 +8,7 @@ def menu(title, prompt, options):
 
     print()
 
-    ans = ""
+    ans = input(f"{prompt}")
     while ans not in options: # Loopar input tills man ger giltig input
         ans = input(f"{prompt}")
     
