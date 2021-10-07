@@ -3,13 +3,13 @@
 def menu(title, prompt, options):
     
     print(title,"\n")
-    for key in options.keys():
+    for key in options:
         print(f"{key}) {options[key]}")
 
     print()
 
     ans = ""
-    while ans not in options.keys(): # Loopar input tills man ger giltig input
+    while ans not in options: # Loopar input tills man ger giltig input
         ans = input(f"{prompt}")
     
     return ans
@@ -22,7 +22,7 @@ def login(users):
         username = input("User: ")
         password = input("Password: ")
 
-        if username in users.keys(): # om användarnamnet finns i keys
+        if username in users: # om användarnamnet finns i keys
             if password == users[username]: # om lösenordet matchar användarnamnets lösen
                 print(f"\nWelcome {username}")
                 return username
